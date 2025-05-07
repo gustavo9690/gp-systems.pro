@@ -1,0 +1,16 @@
+.header {
+  background-color: #003366;
+  padding: 10px;
+  color: white;
+}
+
+.navbar a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+.navbar a.active {
+  font-weight: bold;
+  border-bottom: 2px solid white;
+}
