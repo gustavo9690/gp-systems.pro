@@ -44,6 +44,9 @@ class Autoloader {
                 }
             }
         });
+
+        // ✅ Cargar autoload de Composer
+        require_once __DIR__ . '/../libs/vendor/autoload.php';
     }
 }
 

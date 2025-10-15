@@ -1,0 +1,19 @@
+<nav class="sidebar" [class.closed]="!isOpen">
+  <ul>
+    <li *ngFor="let item of menuItems">
+      <div class="menu-item" (click)="toggleSubmenu(item)">
+        <mat-icon>{{ item.icon }}</mat-icon>
+        <span *ngIf="isOpen">{{ item.label }}</span>
+        <mat-icon *ngIf="item.children && isOpen" class="arrow">
+          {{ item.expanded ? 'expand_more' : 'chevron_right' }}
+        </mat-icon>
+      </div>
+      <!--<ul *ngIf="item.children && item.expanded" class="submenu">
+        <li *ngFor="let child of item.children" [routerLink]="child.route">
+          <mat-icon>{{ child.icon }}</mat-icon>
+          <span *ngIf="isOpen">{{ child.label }}</span>
+        </li>
+      </ul>-->
+    </li>
+  </ul>
+</nav>

@@ -1,0 +1,52 @@
+<!--<header class="header">
+  <nav class="navbar">
+   <ul class="nivel_1">
+      <li>
+        <a routerLink="/inicio" routerLinkActive="active">Inicio</a>
+      </li>
+      <li>
+        <a routerLink="/productos" routerLinkActive="active">Productos</a>
+        <ul class="nivel_2">
+          <li><a routerLink="/productos/televisores" routerLinkActive="active">Televisores</a></li>
+          <li><a routerLink="/productos/celulares" routerLinkActive="active">Celulares</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>-->
+
+
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
+        <a href="/inicio" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="assets/images/Logo_empresa.png" style="height:60px;"/>
+        </a>
+        <div class="flex items-center space-x-6 rtl:space-x-reverse">
+            <app-timer [timeLeft]="125"></app-timer>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded" routerLink="/login">
+              Acceder
+            </button>
+        </div>
+    </div>
+    
+</nav>
+<nav class="bg-gray-50 dark:bg-gray-700">
+    <div class="max-w-screen-xl px-4 py-3 mx-auto">
+        <div class="flex items-center">
+            <ul class="flex flex-row font-medium mt-0 space-x-8 rtl:space-x-reverse text-sm">
+                <li>
+                    <a href="/inicio" class="text-gray-900 dark:text-white hover:underline" routerLinkActive="active" >Inicio</a>
+                </li>
+                <li>
+                    <a href="#" class="text-gray-900 dark:text-white hover:underline">Company</a>
+                </li>
+                <li>
+                    <a href="#" class="text-gray-900 dark:text-white hover:underline">Team</a>
+                </li>
+                <li>
+                    <a href="#" class="text-gray-900 dark:text-white hover:underline">Features</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,29 @@
+<section class="hero">
+  <app-slider [slides]="slides" class="hero-slider">
+	<a class="cta" slot="cta" routerLink="/servicios">Ver servicios</a>
+  </app-slider>
+</section>
+
+<section class="services">
+	<div class="container">
+		<h3>Nuestros Servicios</h3>
+			<div class="cards">
+				<app-service-card title="Desarrollo a medida" icon="💡">Aplicaciones web y móviles adaptadas a tu negocio.</app-service-card>
+				<app-service-card title="Consultoría" icon="📈">Estrategia tecnológica y planeación de producto.</app-service-card>
+				<app-service-card title="Soporte y mantenimiento" icon="🛠️">Garantizamos disponibilidad y soporte continuo.</app-service-card>
+			</div>
+	</div>
+</section>
+
+<section class="process">
+	<div class="container">
+		<h3>Nuestro Proceso</h3>
+			<div class="process-cards">
+				<app-process-card step="1">Análisis</app-process-card>
+				<app-process-card step="2">Diseño</app-process-card>
+				<app-process-card step="3">Desarrollo</app-process-card>
+				<app-process-card step="4">Pruebas</app-process-card>
+				<app-process-card step="5">Lanzamiento</app-process-card>
+			</div>
+	</div>
+</section>

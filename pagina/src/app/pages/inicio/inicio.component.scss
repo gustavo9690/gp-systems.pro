@@ -1,0 +1,48 @@
+/* Styles for Inicio page: hero slider, services and process */
+:root {
+  --primary: #0b3d91;
+  --muted: #6b7280;
+  --card-bg: #ffffff;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.hero {
+  background: linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
+  padding: 2.5rem 0;
+
+  .slider {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background: var(--card-bg);
+    box-shadow: 0 8px 30px rgba(16,24,40,0.06);
+    .slides { display: flex; transition: transform 0.5s ease; }
+    .slide { min-width: 100%; padding: 3rem 1rem; display: none; }
+    .slide.active { display: block; }
+    .slide-content { max-width: 700px; margin: 0 auto; text-align: center; }
+    h2 { color: var(--primary); font-size: 2rem; margin-bottom: 0.5rem; }
+    .subtitle { color: var(--muted); margin-bottom: 1rem; }
+    .cta { display: inline-block; background: var(--primary); color: #fff; padding: 0.6rem 1rem; border-radius: 6px; text-decoration: none; }
+    .arrow { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.06); border: none; width: 42px; height: 42px; border-radius: 8px; cursor: pointer; }
+    .prev { left: 12px; }
+    .next { right: 12px; }
+    .dots { position: absolute; left: 50%; transform: translateX(-50%); bottom: 12px; display: flex; gap: 8px; }
+    .dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(16,24,40,0.12); border: none; cursor: pointer; }
+    .dot.active { background: var(--primary); }
+  }
+}
+
+.services { padding: 2rem 0; background: #fff; .cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; margin-top: 1rem; .card { background: var(--card-bg); padding: 1.25rem; border-radius: 10px; box-shadow: 0 6px 18px rgba(16,24,40,0.04); text-align: center; .icon { font-size: 2rem; margin-bottom: 0.5rem; } } } }
+
+.process { padding: 2rem 0; background: #f9fafb; .process-cards { display: flex; gap: 1rem; margin-top: 1rem; overflow-x: auto; padding-bottom: 0.5rem; .process-card { flex: 0 0 180px; background: var(--card-bg); padding: 1rem; border-radius: 8px; box-shadow: 0 6px 18px rgba(16,24,40,0.04); text-align: center; font-weight: 600; } } }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .services .cards { grid-template-columns: 1fr; }
+  .process .process-cards { gap: 0.75rem; }
+}

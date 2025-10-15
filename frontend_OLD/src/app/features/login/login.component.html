@@ -1,0 +1,25 @@
+<div class="max-w-sm mx-auto mt-10 p-6 content-login">
+  <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+    <h2 class="text-2xl mb-4 font-semibold">Iniciar sesión</h2>
+
+    <div class="mb-4">
+      <label for="usuario" class="block mb-1">Usuario</label>
+      <input type="text" id="usuario" class="w-full border px-3 py-2 rounded" formControlName="usuario">
+      <div *ngIf="formLogin.get('usuario')?.invalid && formLogin.get('usuario')?.touched">
+        El usuario es obligatorio
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <label for="clave" class="block mb-1">Contraseña</label>
+      <input type="password" id="clave" class="w-full border px-3 py-2 rounded" formControlName="clave">
+      <div *ngIf="formLogin.get('clave')?.invalid && formLogin.get('clave')?.touched">
+        La clave es obligatorio
+      </div>
+    </div>
+
+    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full">
+      Iniciar sesión
+    </button>
+  </form>
+</div>

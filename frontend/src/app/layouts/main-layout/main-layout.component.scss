@@ -1,0 +1,29 @@
+.layout-container {
+display: flex;
+flex-direction: column;
+height: 95vh;
+background-color: #f4f6f9;
+}
+
+.main-content {
+display: flex;
+flex: 1;
+overflow: hidden;
+}
+
+.content-wrapper {
+flex: 1;
+padding: 20px;
+transition: margin-left 0.3s ease;
+overflow-y: auto;
+}
+
+.content-wrapper.expanded {
+margin-left: 80px;
+}
+
+@media (max-width: 768px) {
+.content-wrapper {
+padding: 15px;
+}
+}

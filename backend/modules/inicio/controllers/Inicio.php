@@ -2,15 +2,29 @@
 
 class Inicio extends Controller
 {
-    public function index()
+    
+	public function index()
     {
-        // Puedes pasar datos opcionales a la vista
-        $datos = [
+		set_json_header();
+
+		$datos = [
             'titulo' => 'Bienvenido a OptimusERP',
             'mensaje' => 'Este es el módulo de inicio funcionando correctamente.'
         ];
-        print_r($datos);
-        // Carga la vista "modules/inicio/views/index.php"
-        //$this->view('index', $datos);
+		
+		echo json_encode($datos);
+        // Puedes pasar datos opcionales a la vista
+        
     }
+	
+	public function data_prueba(){
+		set_json_header();
+
+		$datos = [
+            'titulo' => 'Bienvenido a OptimusERP',
+            'mensaje' => 'Este es el módulo de inicio funcionando correctamente.'
+        ];
+		
+		echo json_encode($datos);
+	}
 }

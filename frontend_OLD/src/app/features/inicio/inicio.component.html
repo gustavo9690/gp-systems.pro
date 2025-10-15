@@ -1,0 +1,11 @@
+<div *ngIf="datosInicio; else cargando">
+  <h1>{{ datosInicio.titulo }}</h1>
+  <p>{{ datosInicio.mensaje }}</p>
+  <button (click)="abrir()">
+ abrir modal
+</button>
+</div>
+
+<ng-template #cargando>
+  <p>Cargando datos de inicio...</p>
+</ng-template>

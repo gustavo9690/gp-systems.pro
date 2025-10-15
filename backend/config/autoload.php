@@ -2,7 +2,7 @@
 
 $autoload = [];
 
-$autoload['helpers'] = ['url', 'form'];
+$autoload['helpers'] = ['url', 'form','response'];
 $autoload['libs']    = ['session', 'database'];
 
 return $autoload;

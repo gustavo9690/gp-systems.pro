@@ -1,0 +1,19 @@
+<div class="slider" [class.animate]="animate">
+      <button class="arrow prev" (click)="prev()" aria-label="Anterior">&#10094;</button>
+      <div class="slides">
+        <ng-container *ngFor="let s of slides; let i = index">
+          <article class="slide" [class.active]="i === current" [ngStyle]="{'background-image': s.img ? 'url(' + s.img + ')' : 'none'}">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+              <h2>{{ s.title }}</h2>
+              <p class="subtitle">{{ s.subtitle }}</p>
+              <ng-content select=".cta"></ng-content>
+            </div>
+          </article>
+        </ng-container>
+      </div>
+      <button class="arrow next" (click)="next()" aria-label="Siguiente">&#10095;</button>
+      <div class="dots">
+        <button *ngFor="let _ of slides; let j = index" class="dot" [class.active]="j === current" (click)="goTo(j)" [attr.aria-label]="'Ir a slide ' + (j+1)"></button>
+      </div>
+    </div>

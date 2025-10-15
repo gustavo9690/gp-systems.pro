@@ -1,0 +1,35 @@
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <button *ngIf="showMenuToggle" class="menu-toggle" type="button" (click)="toggleMenu()" aria-label="Abrir menú" [attr.aria-expanded]="localMenuOpen || menuAbierto" [class.open]="localMenuOpen || menuAbierto">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+      <a class="logo" routerLink="/" aria-label="Ir al inicio">
+        <img src="assets/logo.png" alt="GP Systems" />
+      </a>
+    </div>
+
+    <nav [class.open]="localMenuOpen || menuAbierto" role="navigation" aria-label="Main navigation">
+      <ul class="nav-list">
+        <li>
+          <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" #rlaInicio="routerLinkActive" [attr.aria-current]="rlaInicio.isActive ? 'page' : null">Inicio</a>
+        </li>
+        <li>
+          <a routerLink="/nosotros" routerLinkActive="active" #rlaNosotros="routerLinkActive" [attr.aria-current]="rlaNosotros.isActive ? 'page' : null">Nosotros</a>
+        </li>
+        <li>
+          <a routerLink="/servicios" routerLinkActive="active" #rlaServicios="routerLinkActive" [attr.aria-current]="rlaServicios.isActive ? 'page' : null">Servicios</a>
+        </li>
+        <li>
+          <a routerLink="/politica-privacidad" routerLinkActive="active" #rlaPrivacidad="routerLinkActive" [attr.aria-current]="rlaPrivacidad.isActive ? 'page' : null">Política de Privacidad</a>
+        </li>
+        <li>
+          <a routerLink="/terminos" routerLinkActive="active" #rlaTerminos="routerLinkActive" [attr.aria-current]="rlaTerminos.isActive ? 'page' : null">Términos</a>
+        </li>
+        <li>
+          <a routerLink="/contacto" routerLinkActive="active" #rlaContacto="routerLinkActive" [attr.aria-current]="rlaContacto.isActive ? 'page' : null">Contacto</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

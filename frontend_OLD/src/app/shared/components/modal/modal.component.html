@@ -1,0 +1,22 @@
+<!-- Fondo oscuro -->
+<div class="backdrop" *ngIf="config" (click)="close()"></div>
+
+<!-- Contenedor del modal -->
+<div class="modal" *ngIf="config">
+  <div class="modal-header">
+    <h2>{{ config.title }}</h2>
+    <button class="close" (click)="close()">✕</button>
+  </div>
+
+  <div class="modal-body">
+    <p>{{ config.message }}</p>
+    <ng-content></ng-content> <!-- Para contenido extra si lo necesitas -->
+  </div>
+
+  <div class="modal-footer">
+    <button *ngIf="config.showAccept" (click)="accept()">Aceptar</button>
+    <button *ngIf="config.showCancel" (click)="cancel()">Cancelar</button>
+    <!-- Si no hay botones aceptar/cancelar, mostramos solo cerrar -->
+    <button *ngIf="!config.showAccept && !config.showCancel" (click)="close()">Cerrar</button>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+.header {
+display: flex;
+align-items: center;
+background-color: var(--mat-primary);
+color: white;
+padding: 0 20px;
+height: 60px;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.menu-btn {
+margin-right: 15px;
+}
+
+.logo {
+width: 130px;
+margin-right: 10px;
+}
+
+.title {
+font-size: 1.2rem;
+font-weight: 600;
+}

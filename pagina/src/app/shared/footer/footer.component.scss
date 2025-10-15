@@ -1,0 +1,45 @@
+/* Elegant footer styles */
+.site-footer {
+  background: linear-gradient(180deg, #0b3d91 0%, #072a63 100%);
+  position: relative;
+  color: #f8fafc;
+  padding: 2rem 0 1rem;
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr 200px 220px;
+    gap: 1.5rem;
+    align-items: start;
+    .col { line-height: 1.6; }
+    .brand .logo { color: #fff; font-weight: 700; font-size: 1.25rem; text-decoration: none; }
+  .brand .logo img { height: 70px; display: block; }
+  .brand .logo .logo-wrap { display: inline-block; background: #ffffff; padding: 10px; border-radius: 8px; }
+  .brand .logo .logo-wrap img { display: block; height: 70px; }
+    .brand .tag { color: rgba(255,255,255,0.85); margin-top: 0.5rem; }
+    .links h4, .contact h4 { margin: 0 0 0.5rem 0; color: rgba(255,255,255,0.95); }
+    .links ul { list-style: none; margin:0; padding:0; }
+    .links a { color: rgba(255,255,255,0.9); text-decoration: none; }
+    .links a:hover { text-decoration: underline; }
+    address a { color: rgba(255,255,255,0.9); text-decoration: none; }
+  }
+  .copyright { margin-top: 1rem; padding-top: 0.75rem; .container { max-width: 1100px; margin: 0 auto; padding: 0 1rem; color: rgba(255,255,255,0.8); font-size: 0.95rem; } }
+}
+
+/* full-width white top border */
+.site-footer::before {
+  content: '';
+  display: block;
+  height: 6px;
+  background: #ffffff;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+@media (max-width: 800px) {
+  .site-footer .footer-inner { grid-template-columns: 1fr; }
+  .site-footer .copyright .container { text-align: center; }
+}
